@@ -1,0 +1,63 @@
+.campus-navbar {
+  padding: 1.25rem 0 0.25rem;
+}
+
+.campus-navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 1rem 1.35rem;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(29, 79, 56, 0.08);
+  border-radius: 22px;
+  box-shadow: 0 14px 36px rgba(23, 49, 38, 0.08);
+  backdrop-filter: blur(18px);
+}
+
+.navbar-brand {
+  color: #1d4f38;
+  font-size: 1.55rem;
+  letter-spacing: -0.02em;
+}
+
+.navbar-brand:hover {
+  color: #163c2b;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.nav-link {
+  color: #4b6458;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 0.72rem 1rem;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #1d4f38;
+  background: rgba(229, 244, 234, 0.95);
+  box-shadow: inset 0 0 0 1px rgba(29, 79, 56, 0.08);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .campus-navbar__inner,
+  .navbar-nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .navbar-brand {
+    text-align: center;
+  }
+
+  .nav-link {
+    text-align: center;
+  }
+}

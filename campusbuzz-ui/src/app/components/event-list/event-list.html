@@ -1,0 +1,43 @@
+<section class="page-panel">
+  <div class="list-hero">
+    <div class="section-heading">
+      <span class="eyebrow">Campus events</span>
+      <h2>CampusBuzz Event Listing</h2>
+      <p>Discover upcoming events, compare venues, and keep the campus calendar organized in one polished view.</p>
+    </div>
+
+    <!-- <a class="btn btn-primary list-hero__cta" routerLink="/add-event">Add New Event</a> -->
+  </div>
+
+  <div *ngIf="successMessage" class="status-message" role="status" aria-live="polite">
+    {{ successMessage }}
+  </div>
+
+  <div *ngIf="events.length === 0" class="empty-state">
+    <p>No events have been added yet. Start by creating a new event.</p>
+  </div>
+
+  <div class="event-grid" *ngIf="events.length > 0">
+    <div *ngFor="let event of events" class="card event-card">
+      <div class="card-body">
+        <div class="event-card__top">
+          <div class="event-card__meta">
+            <span class="event-chip">{{ event.ticketPrice === 0 ? 'Free Entry' : 'Paid Event' }}</span>
+          </div>
+
+          <span class="event-card__price">{{ event.ticketPrice === 0 ? 'Free' : 'R' + event.ticketPrice }}</span>
+        </div>
+
+        <h5 class="card-title">{{ event.eventTitle }}</h5>
+        <p class="event-card__location">{{ event.location }}</p>
+        <p class="event-card__description text-muted-soft">
+        </p>
+
+        <div class="event-card__actions">
+          <button class="btn btn-primary btn-sm me-2" (click)="onEdit(event.id)">Edit</button>
+          <button class="btn btn-danger btn-sm" (click)="onDelete(event.id)">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

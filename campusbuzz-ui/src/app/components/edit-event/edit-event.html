@@ -1,0 +1,36 @@
+<section class="page-panel form-page">
+  <div class="section-heading">
+    <h2>Edit Event</h2>
+  </div>
+
+  <form [formGroup]="eventForm" (ngSubmit)="onSubmit()" class="form-card p-4">
+    <div class="mb-3">
+      <label class="form-label">Event Title:</label>
+      <input type="text" class="form-control" [class.is-invalid]="hasError('eventTitle')" formControlName="eventTitle">
+      <div *ngIf="hasError('eventTitle')" class="field-error">
+        Event title is required.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Location:</label>
+      <input type="text" class="form-control" [class.is-invalid]="hasError('location')" formControlName="location">
+      <div *ngIf="hasError('location')" class="field-error">
+        Location is required.
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <label class="form-label">Ticket Price:</label>
+      <input type="number" class="form-control" [class.is-invalid]="hasError('ticketPrice')" formControlName="ticketPrice">
+      <div *ngIf="hasError('ticketPrice')" class="field-error">
+        Ticket price is required.
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" class="btn btn-primary me-2">Save Changes</button>
+      <button type="button" class="btn btn-secondary" (click)="onCancel()">Cancel</button>
+    </div>
+  </form>
+</section>
