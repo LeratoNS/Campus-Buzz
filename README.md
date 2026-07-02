@@ -61,6 +61,17 @@ SQL Server
 
 ##  Screenshots
 
+### Home Page
+
+![Home](Screenshots/Listing-page.png)
+
+### Add Event
+
+![Add Event](Screenshots/Add-page.png)
+
+### Edit Event
+
+![Add Event](Screenshots/Edit-page.png)
 
 
 
@@ -69,7 +80,7 @@ SQL Server
 ### Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/CampusBuzz.git
+https://github.com/LeratoNS/Campus-Buzz.git
 ```
 
 ### Backend
