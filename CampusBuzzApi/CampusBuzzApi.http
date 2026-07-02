@@ -1,0 +1,6 @@
+@CampusBuzzApi_HostAddress = http://localhost:5195
+
+GET {{CampusBuzzApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
